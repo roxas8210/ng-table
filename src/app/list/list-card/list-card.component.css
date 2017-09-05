@@ -1,0 +1,10 @@
+md-card{
+    margin-top: 2%;
+    margin-left: 2%;
+    width: 25%;
+    float: left;
+}
+
+my-card .logo{
+    background-size: cover;
+}
