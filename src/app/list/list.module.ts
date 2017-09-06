@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MdCardModule, MdButtonModule, MdListModule } from "@angular/material";
 
 import { routing } from "./list.routers";
+import { CompanyService } from "./company.service";
 
 import { ListCardComponent } from "./list-card/list-card.component";
 
@@ -16,6 +17,9 @@ import { ListCardComponent } from "./list-card/list-card.component";
     MdCardModule,
     MdButtonModule,
     MdListModule
+  ],
+  providers: [
+    CompanyService
   ],
   declarations: [
     ListCardComponent
