@@ -5,8 +5,6 @@ header{
     background-color: #20272a;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
     z-index: 99999;
-    /* position: fixed; */
-    /* top: 0; */
   }
   header img{
     height: 42px;

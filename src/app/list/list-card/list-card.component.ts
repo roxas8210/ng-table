@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Company } from "../../class/company.class";
+import { Company } from '../../class/company.class';
 
 @Component({
   selector: 'app-list-card',
@@ -9,19 +9,15 @@ import { Company } from "../../class/company.class";
 export class ListCardComponent implements OnInit {
 
   @Input() list: Company;
-  
+
   constructor() { }
-  
+
   update(): void {
     console.log(this);
   }
-  
+
   ngOnInit() {
 
-  }
-
-  ngOnChanges() {
-    
   }
 
 }

@@ -1,9 +1,7 @@
 import { Component, OnInit, ChangeDetectorRef, Inject } from '@angular/core';
-// import { CompanyService } from "../company.service";
-import { Company } from "../../class/company.class";
+import { Company } from '../../class/company.class';
 
 @Component({
-  // selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
@@ -12,9 +10,9 @@ export class ListComponent implements OnInit {
   public initList: Company = new Company();
 
   public lists: Company[] = [];
-  public getAll: boolean = false;
+  public getAll = false;
 
-  constructor(@Inject('companyApiService') private service , private ref: ChangeDetectorRef) { }
+  constructor(@Inject('companyApiService') private service, private ref: ChangeDetectorRef) { }
 
   getList(): void {
     this.service.query().then(res => {
@@ -34,7 +32,4 @@ export class ListComponent implements OnInit {
     console.log('正在初始化list组件');
   }
 
-  ngOnChanges() {
-
-  }
 }

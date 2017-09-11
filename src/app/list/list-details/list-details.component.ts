@@ -1,7 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { Router, ActivatedRoute, Params } from "@angular/router";
-import { CompanyApiService } from "../company-api.service";
-import { Company } from "../../class/company.class";
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { CompanyApiService } from '../company-api.service';
+import { Company } from '../../class/company.class';
 
 @Component({
   templateUrl: './list-details.component.html',
@@ -14,7 +14,7 @@ export class ListDetailsComponent implements OnInit {
   constructor(@Inject('companyApiService') private service , private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    let objId = this.route.params['value'];
+    const objId = this.route.params['value'];
     console.log(objId);
     this.service.get(objId.id).then( res => {
       this.company = res;
