@@ -1,9 +1,13 @@
 import { Routes, RouterModule } from "@angular/router";
-import { ListCardComponent } from "./list-card/list-card.component";
+import { ListComponent } from "./list/list.component";
+import { ListDetailsComponent } from "./list-details/list-details.component";
 
 export const routers: Routes = [{
-    path: 'list',
-    component: ListCardComponent
+    path: 'lists',
+    component: ListComponent
+},{
+    path: 'list/:id',
+    component: ListDetailsComponent
 }];
 
 export const routing = RouterModule.forChild(routers);

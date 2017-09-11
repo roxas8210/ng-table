@@ -29,6 +29,30 @@ export class CompanyService {
     });
   }
 
+  public insertCompany(companyObj: Company): Promise<Object> {
+    for( let key in companyObj ) {
+      this.company.set(key,companyObj[key]);
+  }
+  return this.company.save().then( res => res);
+  }
+
+  public update(id: string, dataObj: Company): Promise<Object> {
+    let updateArray: AV.Object[] = [];
+    let companyUpdate = this.company;
+    for( let key in dataObj ) {
+        companyUpdate.set(key,dataObj[key]);
+    }
+    updateArray.push(companyUpdate);
+    return AV.Object.saveAll(updateArray).then( res => res );
+  }
+  
+  public get( id: string ): Promise<Company> {
+    return this.companyQuery.get(id).then( res => {
+      let data = res['attributes'] ;
+      return data;
+    });
+  }
+  
   // public query(): Promise<Company[]> {
   //   return this.companyQuery.find().then( res => res as Company[] );
   // }
