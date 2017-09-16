@@ -1,13 +1,14 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-header{
-    width: 100%;
-    height: 70px;
-    background-color: #20272a;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
-    z-index: 99999;
-  }
-  header img{
-    height: 42px;
-    margin-left: 45px;
-    margin-top: 15px;
-  }
+.site{
+  display: flex;
+  flex-direction: column;
+}
+
+.site main{
+  flex: 1;
+}
+
+md-sidenav{
+  width: 300px;
+}

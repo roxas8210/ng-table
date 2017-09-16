@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { MdSidenavModule } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdGridListModule } from '@angular/material';
 
+// import { SharedModule } from './shared/shared.module';
 import { ListModule } from './list/list.module';
+import { CoreModule } from './core/core.module';
 
 import { AppComponent } from './app.component';
 import { routing } from './app.routers';
@@ -17,7 +19,9 @@ import { routing } from './app.routers';
     BrowserModule,
     ListModule,
     routing,
-    MdGridListModule
+    // SharedModule,
+    CoreModule,
+    MdSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

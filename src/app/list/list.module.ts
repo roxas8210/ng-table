@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 
+import { SharedModule } from '../shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdCardModule, MdButtonModule, MdListModule } from '@angular/material';
 
 import { routing } from './list.routers';
 import { CompanyService } from './company.service';
@@ -18,10 +18,8 @@ import { ListComponent } from './list/list.component';
     CommonModule,
     routing,
     BrowserAnimationsModule,
-    MdCardModule,
-    MdButtonModule,
-    MdListModule,
-    HttpModule
+    HttpModule,
+    SharedModule
   ],
   providers: [{
     provide: 'companyService',
