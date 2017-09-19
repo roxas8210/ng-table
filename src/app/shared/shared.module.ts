@@ -6,7 +6,10 @@ import {
   MdListModule,
   MdToolbarModule,
   MdSidenavModule,
-  MdIconModule
+  MdIconModule,
+  MdInputModule,
+  MdDatepickerModule,
+  MdNativeDateModule
 } from '@angular/material';
 
 @NgModule({
@@ -17,7 +20,10 @@ import {
     MdListModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdIconModule
+    MdIconModule,
+    MdInputModule,
+    MdDatepickerModule,
+    MdNativeDateModule
   ],
   exports: [
     CommonModule,
@@ -26,7 +32,10 @@ import {
     MdListModule,
     MdToolbarModule,
     MdSidenavModule,
-    MdIconModule
+    MdIconModule,
+    MdInputModule,
+    MdDatepickerModule,
+    MdNativeDateModule
   ],
   declarations: [],
 })

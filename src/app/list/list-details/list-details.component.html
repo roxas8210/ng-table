@@ -1,3 +1,26 @@
-<p>
-  list-details works!
-</p>
+<md-card>
+  <md-card-header>
+    <md-card-title>{{company?.companyName}}</md-card-title>
+  </md-card-header>
+  <md-card-content>
+    <form>
+      <md-form-field floatPlaceholder="always">
+        <md-placeholder>公司名</md-placeholder>
+        <input mdInput value="{{company?.companyName}}">
+        <md-hint>请输入公司全称</md-hint>
+      </md-form-field>
+      <md-form-field floatPlaceholder="always">
+        <md-placeholder>业务</md-placeholder>
+        <input mdInput value="{{company?.sales}}">
+        <md-hint>请输入业务员姓名</md-hint>
+      </md-form-field>
+      <!-- <md-form-field floatPlaceholder="always">
+        <md-placeholder>下单日期</md-placeholder> -->
+        <input [mdDatepicker]="picker" (dateChange)="onInput($event)" [value]="company?.orderDate">
+        <!-- <md-hint>请选择一个日期</md-hint> -->
+        <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+        <md-datepicker #picker></md-datepicker>
+      <!-- </md-form-field> -->
+    </form>
+  </md-card-content>
+</md-card>

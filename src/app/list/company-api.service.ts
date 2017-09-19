@@ -29,4 +29,11 @@ export class CompanyApiService {
     }).toPromise().then( res => res.json() as Company );
   }
 
+  update( id: string, dataObj: Company ): Promise<Company> {
+    const url = `${this.api_url}/${id}`;
+    return this.http.put( url, dataObj, {
+      headers: this.headers
+    }).toPromise().then( res => res.json() as Company );
+  }
+
 }
