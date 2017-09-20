@@ -12,8 +12,8 @@ export class Company {
     public testaddress = 'http://cs.esun88.com';
     public upload = false;
     public webaddress = 'http://cs.esun88.com';
-    public createDate: Date = new Date();
+    public createDate: Object = new Object();
     public sales = '燃';
-    public finishDate: Date = new Date();
+    public finishDate: Object = new Object();
     public orderDate: Object = new Object();
 }
