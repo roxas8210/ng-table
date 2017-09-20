@@ -15,5 +15,5 @@ export class Company {
     public createDate: Date = new Date();
     public sales = '燃';
     public finishDate: Date = new Date();
-    public orderDate: Date = new Date();
+    public orderDate: Object = new Object();
 }

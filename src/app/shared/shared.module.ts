@@ -9,7 +9,8 @@ import {
   MdIconModule,
   MdInputModule,
   MdDatepickerModule,
-  MdNativeDateModule
+  MdNativeDateModule,
+  MdSlideToggleModule
 } from '@angular/material';
 
 @NgModule({
@@ -23,7 +24,8 @@ import {
     MdIconModule,
     MdInputModule,
     MdDatepickerModule,
-    MdNativeDateModule
+    MdNativeDateModule,
+    MdSlideToggleModule
   ],
   exports: [
     CommonModule,
@@ -35,7 +37,8 @@ import {
     MdIconModule,
     MdInputModule,
     MdDatepickerModule,
-    MdNativeDateModule
+    MdNativeDateModule,
+    MdSlideToggleModule
   ],
   declarations: [],
 })

@@ -1,9 +1,11 @@
-<md-card>
-  <md-card-header>
-    <md-card-title>{{company?.companyName}}</md-card-title>
-  </md-card-header>
-  <md-card-content>
-    <form>
+<form>
+  <md-card>
+    <md-card-header>
+      <md-card-title>
+        <h3>{{company?.companyName}}</h3>
+      </md-card-title>
+    </md-card-header>
+    <md-card-content>
       <md-form-field floatPlaceholder="always">
         <md-placeholder>公司名</md-placeholder>
         <input mdInput value="{{company?.companyName}}">
@@ -14,13 +16,58 @@
         <input mdInput value="{{company?.sales}}">
         <md-hint>请输入业务员姓名</md-hint>
       </md-form-field>
-      <!-- <md-form-field floatPlaceholder="always">
-        <md-placeholder>下单日期</md-placeholder> -->
-        <input [mdDatepicker]="picker" (dateChange)="onInput($event)" [value]="company?.orderDate">
-        <!-- <md-hint>请选择一个日期</md-hint> -->
+      <md-form-field floatPlaceholder="always">
+        <md-placeholder>下单日期</md-placeholder>
+        <input mdInput [mdDatepicker]="picker" (dateChange)="onInput($event)" [value]="pickerDate">
+        <md-hint>请选择一个日期</md-hint>
         <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
         <md-datepicker #picker></md-datepicker>
-      <!-- </md-form-field> -->
-    </form>
-  </md-card-content>
-</md-card>
+      </md-form-field>
+      <md-form-field floatPlaceholder="always">
+        <md-placeholder>语言版本</md-placeholder>
+        <input mdInput value="{{company?.lang}}">
+        <md-hint>输入该站的语言版本</md-hint>
+      </md-form-field>
+      <md-form-field floatPlaceholder="always">
+        <md-placeholder>设计师</md-placeholder>
+        <input mdInput value="{{company?.designBy}}">
+        <md-hint>请输入设计师的名字</md-hint>
+      </md-form-field>
+      <md-form-field floatPlaceholder="always">
+        <md-placeholder>价格</md-placeholder>
+        <input mdInput value="{{company?.price}}">
+        <md-hint>请输入该站的价格</md-hint>
+      </md-form-field>
+      <md-form-field floatPlaceholder="always">
+        <md-placeholder>测试网址</md-placeholder>
+        <input mdInput value="{{company?.webaddress}}">
+        <md-hint>请输入该站测试空间的网址</md-hint>
+      </md-form-field>
+      <md-form-field floatPlaceholder="always">
+        <md-placeholder>网址</md-placeholder>
+        <input mdInput value="{{company?.webaddress}}">
+        <md-hint>请输入该站正式空间的网址</md-hint>
+      </md-form-field>
+    </md-card-content>
+  </md-card>
+  <md-card>
+      <md-card-header>
+        <md-card-title>
+          <h3>完成情况</h3>
+        </md-card-title>
+      </md-card-header>
+      <md-card-content>
+        <md-slide-toggle [checked]="company?.program">程序</md-slide-toggle>
+        <md-slide-toggle [checked]="company?.info">资料</md-slide-toggle>
+        <md-slide-toggle [checked]="company?.uploadtest">上传测试空间</md-slide-toggle>
+        <md-slide-toggle [checked]="company?.upload">上传正式空间</md-slide-toggle>
+        <md-form-field floatPlaceholder="always">
+          <md-placeholder>完成日期</md-placeholder>
+          <input mdInput [mdDatepicker]="updatePicker" (dateChange)="onInput($event)" [value]="uploadPicker">
+          <md-hint>填写完成日期</md-hint>
+          <md-datepicker-toggle mdSuffix [for]="updatePicker"></md-datepicker-toggle>
+          <md-datepicker #updatePicker></md-datepicker>
+        </md-form-field>
+      </md-card-content>
+    </md-card>
+</form>
